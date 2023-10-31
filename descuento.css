@@ -30,7 +30,7 @@ body {
     flex-direction: column;
 }
 .form__title {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
 }
 .form__title:hover {
     font-size: 2.2rem;
