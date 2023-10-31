@@ -14,19 +14,19 @@ function calculatePriceDiscount (e) {
 
     if(!price || !discount) {
 
-        pResult.innerText = `por favor llena el formulario`
+        pResult.innerText = `please fill out the boxes `
         return;
     }
 
     if(discount > 80) {
 
-        pResult.innerText = `ingresa un descuento valido`
+        pResult.innerText = `please put a real discount`
         return;
     }
 
     const newPrice = (price * (100 - discount)) / 100;
     
-    pResult.innerText = `el nuevo precio con descuento es $ ${newPrice}`
+    pResult.innerText = `Real Price $ ${newPrice}`
 
     FormData.reset;
     
