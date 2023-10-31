@@ -1,34 +1,42 @@
 const boton = document.querySelector('#calculate');
 const inputPrice = document.querySelector('#price');
-const inputDiscount = document.querySelector('#discount');
+const inputCoupon = document.querySelector('#coupon');
 const pResult = document.querySelector('#result')
 
 
 boton.addEventListener('click', calculatePriceDiscount);
 
+const couponsObj = {
+    'good day' : 25,
+    '4582000' : 15,
+    'carnaval25': 20
+}
+
 function calculatePriceDiscount (e) {
     e.preventDefault()
 
     const price = Number(inputPrice.value);
-    const discount = Number(inputDiscount.value);
+    const coupon = inputCoupon.value;
 
-    if(!price || !discount) {
-
+    if(!price || !coupon) {
         pResult.innerText = `please fill out the boxes `
         return;
     }
 
-    if(discount > 80) {
+    let discount;
 
-        pResult.innerText = `please put a real discount`
+    if (couponsObj[coupon]) {
+        discount = couponsObj[coupon];
+        
+
+    } else {
+        pResult.innerText = `el cupon no es valido`
         return;
     }
 
-    const newPrice = (price * (100 - discount)) / 100;
-    
-    pResult.innerText = `Real Price $ ${newPrice}`
 
-    FormData.reset;
-    
+    const newPrice = (price * (100 - discount)) / 100;
+    pResult.innerText = `the real prices $ ${newPrice}`
+       
 }
 calculatePriceDiscount()
