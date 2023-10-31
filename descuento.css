@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #999;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.form__containe {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form__calculate {
+    border: 0.5em solid rgb(167, 161, 161);
+    border-radius: 0.8em;
+    padding: 1em 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5em;
+}
+.input__div {
+    display: flex;
+    flex-direction: column;
+}
+.form__title {
+    font-size: 2.2rem;
+}
+.form__title:hover {
+    font-size: 2.2rem;
+    text-shadow: 1px 0.5px 0.5px white;
+    transform: scale(1.0.5);
+}
+.input__div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.3em;
+}
+.input__div label {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.input__div input {
+    padding: 0.2em 1em;
+    width: 10em;
+    border-radius: 0.5em;
+    border:none;
+    outline: none;
+
+}
+#calculate {
+    position: relative;
+    width: 10em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border: none;
+    outline: none;
+    background: rgb(95, 91, 91);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0.1em 0.1em 0.3em 0.1em white;
+}
+#calculate:hover {
+    transform: scale(1.1);
+}
